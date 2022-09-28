@@ -23,7 +23,7 @@ Extra: Learning how to render HTML file using express.js
 
 In the `nginx-sample/index.html` file, search for "TODO" and fill in the blanks.
 
-Follow these guide to dockerise the sample NGINX reverse proxy to serve the static HTML in `nginx/index.html`.
+Follow these guide to dockerise the sample NGINX reverse proxy to serve the static HTML in `nginx-sample/index.html`.
 - [https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/](https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/)
 - [https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
 - [https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker/](https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker/)
