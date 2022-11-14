@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
-const PORT = 8080;
+const PORT = 6688;
 const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
