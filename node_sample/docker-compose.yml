@@ -2,7 +2,7 @@ version: "3.8"
 services:
     nodeserver:
         build:
-            context: ./app
+            context: ./my-app
     nginx:
         restart: always
         build:
