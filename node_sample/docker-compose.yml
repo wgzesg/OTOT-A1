@@ -1,11 +1,12 @@
-version: "3.8"
+version: "2.8"
 services:
-    nodeserver:
+    backend:
+        build:
+            context: ./backend
+        ports:
+            - "5100:5100"
+    frontend:
         build:
             context: ./my-app
-    nginx:
-        restart: always
-        build:
-            context: ./nginx
         ports:
-            - "8080:80"
+            - "8080:3000"
