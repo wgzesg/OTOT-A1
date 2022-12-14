@@ -35,9 +35,11 @@ class GamePage extends React.Component {
   handleClick = () => {
     console.log("clicked");
     const past = this.state.past;
-    axios.post(`/infer`, { past })
+    axios.post('/infer', { past })
     .then(res => {
+      console.log("received response");
       const ai_action = res.data['data'];
+      console.log(ai_action);
       const human_action = this.state.castle;
       this.setState({ past: { games: [...past.games, { human: human_action, ai: ai_action }] } });
     })

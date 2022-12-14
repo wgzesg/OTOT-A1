@@ -15,7 +15,7 @@ export default function CastleSlider({idx, onChange, value}) {
   };
 
   const handleInputChange = (event) => {
-    onChange(idx, event.target.value === '' ? '' : Number(event.target.value));
+    onChange(idx, event.target.value === '' ? 0 : Number(event.target.value));
   };
 
   const handleBlur = () => {

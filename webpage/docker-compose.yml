@@ -3,13 +3,9 @@ services:
     backend:
         build:
             context: ./backend
-        # ports:
-        #     - "5100:5000"
     frontend:
         build:
             context: ./my-app
-        # ports:
-        #     - "8080:3000"
     nginx:
         build:
             context: ./nginx
