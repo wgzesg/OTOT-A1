@@ -2,7 +2,6 @@ import React from 'react';
 import { Typography, Button, Divider, Stack, Grid, Box } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 import CastleSlider from './CastleSlider';
-// import ResultCard from './ResultCard';
 import axios from 'axios';
 import ResultCard from './ResultCard';
 
@@ -36,7 +35,7 @@ class GamePage extends React.Component {
   handleClick = () => {
     console.log("clicked");
     const past = this.state.past;
-    axios.post(`http://localhost:5100/infer`, { past })
+    axios.post(`/infer`, { past })
     .then(res => {
       const ai_action = res.data['data'];
       const human_action = this.state.castle;

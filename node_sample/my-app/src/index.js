@@ -25,8 +25,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-console.log(process.env.HTTPS)
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
