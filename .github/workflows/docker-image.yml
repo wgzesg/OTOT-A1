@@ -17,7 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the Docker image
-      run: docker build ./my-app/ -t frontend
-           docker build ./nginx/ -t nginx
+      run: |
+           docker build -t frontend ./my-app/
+           docker build -t nginx ./nginx/
            docker build ./backend/ -t backend
       working-directory: ./webpage
