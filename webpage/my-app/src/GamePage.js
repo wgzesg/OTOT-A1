@@ -4,6 +4,7 @@ import { blueGrey } from '@mui/material/colors';
 import CastleSlider from './CastleSlider';
 import axios from 'axios';
 import ResultCard from './ResultCard';
+import { config } from './Constant';
 
 class GamePage extends React.Component {
 
@@ -35,7 +36,7 @@ class GamePage extends React.Component {
   handleClick = () => {
     console.log("clicked");
     const past = this.state.past;
-    axios.post('/infer', { past })
+    axios.post(config.url.API_URL + '/infer', { past })
     .then(res => {
       console.log("received response");
       const ai_action = res.data['data'];
