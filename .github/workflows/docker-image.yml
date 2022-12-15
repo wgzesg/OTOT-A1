@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+run-name: Build images for front, back and nginx
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Build the Docker image
+      run: docker build ./my-app/ --t frontend
+           docker build ./nginx/ --t nginx
+           docker build ./backend/ --t backend
+      working-directory: ./webpage
